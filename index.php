@@ -1,23 +1,17 @@
 <?php
 /**
- * The main template file
- *
- * Layout 4rodas
- *
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
  *
  * @package WordPress
- * @subpackage Quatro_Rodas
- * @since Quatro Rodas
  */
 
-get_header(); ?>
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define('WP_USE_THEMES', true);
 
-	<main>
-		<div class="container">
-			<?php //get_header(); ?>
-			<?php get_template_part('destaques'); ?>
-			<?php get_template_part('content'); ?>
-		</div>
-	</main>
-
-<?php get_footer(); ?>
+/** Loads the WordPress Environment and Template */
+require( dirname( __FILE__ ) . '/wp-blog-header.php' );
